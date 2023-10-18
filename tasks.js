@@ -43,18 +43,18 @@ for (let i=0; i<animals.length; i++) {
 // Как удалить последние 2 элемента?
 
 let arr = ['cat', 'dog', 'parrot', 'horse', 'fish', 'chicken', 'lion'];
-arr.splice(4, 1)
+arr.splice(4, 1);
 
 arr.shift();
-arr.splice(0, 1)
+arr.splice(0, 1);
 
-arr.splice(5, 2)
-arr.splice(-2, 2)
+arr.splice(5, 2);
+arr.splice(-2, 2);
 
 
 // Дан массив:
 
-[31, 10, 'chicken', 9, 'fish', 10]
+[31, 10, 'chicken', 9, 'fish', 10];
 // Как отфильтровать исходный массив так, чтобы получить массив, где будут только строки?
 // Как отфильтровать исходный массив так, чтобы получить массив, где будут только элементы со значением 10?
 
@@ -75,5 +75,36 @@ const person = {
 
 for (let key in person) {
     console.log(`${key}: ${person[key]}`)
-    
+};
+
+// 2) Необходимо вывести в консоль браузера все свойства и значения объекта person таким образом, чтобы вывод выглядел следующим образом:
+
+// First name: Jack
+// Last name: Sparrow
+// Age: 25 ages
+// Where to find: Caribbean sea
+
+for (let key in person) {
+    switch(key) {
+        case 'firstNmae': {
+            console.log(`First name: ${person[key]}`);
+            break;
+        }
+
+        case 'lastName': {
+            console.log(`Last name: ${person[key]}`);
+            break;
+        }
+
+        case 'age': {
+            console.log(`Age: ${person[key]} ages`);
+            break;
+        }
+
+        case 'location': {
+            console.log(`Where to find: ${person[key]}`);
+            break;
+        }
+
+    }
 }
